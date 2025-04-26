@@ -5,6 +5,7 @@ import Contact from './pages/Contact';
 import DashboardStudent from './pages/DashboardStudent';
 import DashboardParent from './pages/DashboardParent';
 import DashboardSchool from './pages/DashboardSchool';
+import Analytics from './pages/Analytics';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import { AuthProvider } from './context/AuthContext';
@@ -72,6 +73,16 @@ function App() {
                 element={
                   <ProtectedRoute requiredRole="school">
                     <DashboardSchool />
+                  </ProtectedRoute>
+                } 
+              />
+
+              {/* Analytics Route */}
+              <Route 
+                path="/analytics" 
+                element={
+                  <ProtectedRoute>
+                    <Analytics />
                   </ProtectedRoute>
                 } 
               />
