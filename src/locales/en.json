@@ -1,0 +1,84 @@
+{
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "hero": {
+    "title": "Growth journey starts here",
+    "subtitle": "Platform for conscious student development",
+    "tryFree": "Try for free",
+    "learnMore": "Learn more"
+  },
+  "features": {
+    "title": "Why EduTrack?",
+    "aiRecommendations": {
+      "title": "AI Recommendations",
+      "description": "Personalized learning path based on individual progress"
+    },
+    "progressTracking": {
+      "title": "Progress Tracking",
+      "description": "Visual analytics to track improvement over time"
+    },
+    "parentSupport": {
+      "title": "Parent Support",
+      "description": "Real-time reports and insights for parents"
+    },
+    "teacherModule": {
+      "title": "Teacher Module",
+      "description": "Comprehensive tools for educators"
+    },
+    "multilingual": {
+      "title": "Multilingual",
+      "description": "Available in Russian, Kazakh and English"
+    }
+  },
+  "growthStories": {
+    "title": "Growth Stories",
+    "viewMore": "View more stories"
+  },
+  "dashboard": {
+    "student": {
+      "welcome": "Welcome, {{name}}",
+      "progress": "Your Progress",
+      "recommendations": "Recommendations",
+      "openAI": "Open AI Chat",
+      "achievements": "Recent Achievements"
+    },
+    "parent": {
+      "summary": "Child's Summary",
+      "reports": "Weekly & Monthly Reports",
+      "aiAdvice": "AI Advice for Parents",
+      "notifications": "Achievement Notifications"
+    },
+    "school": {
+      "classes": "Class Summary",
+      "performance": "Performance Overview",
+      "reports": "Download Reports",
+      "userManagement": "User Management"
+    }
+  },
+  "aiChat": {
+    "title": "AI Mentor",
+    "placeholder": "Ask me anything about learning...",
+    "send": "Send"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Submit",
+    "success": "Message sent successfully"
+  },
+  "footer": {
+    "product": "Product",
+    "company": "Company",
+    "legal": "Legal",
+    "rights": "All rights reserved",
+    "madeWith": "Made with ❤️ by EduTrack team"
+  }
+} 
