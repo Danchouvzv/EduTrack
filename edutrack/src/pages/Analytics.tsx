@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { useTranslation } from 'react-i18next';
 import { 
   PieChart, Pie, Cell, ResponsiveContainer, Tooltip, 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend,
@@ -41,7 +40,6 @@ interface ProgressHistory {
 }
 
 const Analytics = () => {
-  const { t } = useTranslation();
   const { currentUser } = useAuth();
   const [loading, setLoading] = useState(true);
   const [subjects, setSubjects] = useState<Subject[]>([]);
@@ -236,16 +234,16 @@ const Analytics = () => {
         <div className="flex-grow flex items-center justify-center py-12">
           <div className="text-center px-4">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              {t('analytics.authRequired.title')}
+              Требуется авторизация
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              {t('analytics.authRequired.description')}
+              Для доступа к аналитике успеваемости необходимо войти в систему.
             </p>
             <a 
               href="/auth/login" 
               className="btn btn-primary inline-block"
             >
-              {t('analytics.authRequired.button')}
+              Войти в систему
             </a>
           </div>
         </div>
@@ -264,10 +262,10 @@ const Analytics = () => {
         <div className="flex-grow flex items-center justify-center py-12">
           <div className="text-center px-4">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              {t('analytics.noData.title')}
+              Данные отсутствуют
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              {t('analytics.noData.description')}
+              У вас пока нет данных для аналитики. Начните обучение, чтобы увидеть статистику.
             </p>
           </div>
         </div>
@@ -282,13 +280,13 @@ const Analytics = () => {
       
       <main className="max-w-7xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-          {t('analytics.title')}
+          Аналитика успеваемости
         </h1>
         
         {/* Секция с круговыми диаграммами предметов */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
-            {t('analytics.subjectProgress')}
+            Общий прогресс по предметам
           </h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -344,7 +342,7 @@ const Analytics = () => {
         {/* Таблица тем внутри предметов */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
-            {t('analytics.topics.title')}
+            Темы и рекомендации
             {selectedSubject && (
               <span className="ml-2 text-gray-500 dark:text-gray-400 font-normal">
                 ({subjects.find(s => s.id === selectedSubject)?.name})
@@ -360,19 +358,19 @@ const Analytics = () => {
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
                   >
-                    {t('analytics.columns.topic')}
+                    Тема
                   </th>
                   <th
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
                   >
-                    {t('analytics.columns.progress')}
+                    Прогресс
                   </th>
                   <th
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
                   >
-                    {t('analytics.columns.recommendation')}
+                    AI-рекомендация
                   </th>
                 </tr>
               </thead>
@@ -409,7 +407,7 @@ const Analytics = () => {
                 ) : (
                   <tr>
                     <td colSpan={3} className="px-6 py-4 text-center text-gray-500 dark:text-gray-400">
-                      {t('analytics.topics.notFound')}
+                      Темы не найдены для выбранного предмета
                     </td>
                   </tr>
                 )}
@@ -421,7 +419,7 @@ const Analytics = () => {
         {/* График ошибок */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
-            {t('analytics.errorTypes')}
+            Типы ошибок
           </h2>
           
           <div className="bg-white dark:bg-[#1e1e1e] rounded-xl shadow-md p-6">
@@ -443,7 +441,7 @@ const Analytics = () => {
                   <Legend />
                   <Bar 
                     dataKey="count" 
-                    name={t('analytics.errorCount')} 
+                    name="Количество ошибок" 
                     fill="#FF6B8B" 
                     radius={[4, 4, 0, 0]}
                   />
@@ -456,7 +454,7 @@ const Analytics = () => {
         {/* График роста */}
         <section>
           <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
-            {t('analytics.performance')}
+            Динамика успеваемости
           </h2>
           
           <div className="bg-white dark:bg-[#1e1e1e] rounded-xl shadow-md p-6">
@@ -480,7 +478,7 @@ const Analytics = () => {
                   <Line
                     type="monotone"
                     dataKey="progress"
-                    name={t('analytics.chart.yourProgress')}
+                    name="Ваш прогресс"
                     stroke="#0088FE"
                     activeDot={{ r: 8 }}
                     strokeWidth={2}
@@ -488,7 +486,7 @@ const Analytics = () => {
                   <Line
                     type="monotone"
                     dataKey="average"
-                    name={t('analytics.chart.averageProgress')}
+                    name="Средний прогресс"
                     stroke="#00C49F"
                     strokeDasharray="5 5"
                   />

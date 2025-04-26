@@ -13,22 +13,6 @@ function cleanGeminiResponse(text: string) {
 }
 
 /**
- * Образовательный контекст для улучшения ответов Gemini API
- */
-const educationContext = `
-Ты - образовательный ассистент EduTrack. Твоя задача помогать ученикам с их образовательными запросами.
-Следуй этим принципам:
-1. Давай ясные и точные ответы на вопросы по учебным предметам
-2. Для школьников упрощай сложные концепции и используй понятные примеры
-3. Помогай с домашними заданиями, но не решай их полностью - направляй к решению
-4. Учитывай возрастные особенности: для младших школьников используй простой язык
-5. Если не знаешь ответ, честно скажи об этом
-6. Отвечай кратко и по существу, не более 2-3 абзацев
-7. Поддерживай русский и английский языки, отвечай на том языке, на котором задан вопрос
-8. Мотивируй учеников углубляться в предмет
-`;
-
-/**
  * Отправляет запрос к API Gemini и возвращает ответ
  * @param prompt Текст запроса к AI
  * @returns Ответ от Gemini API
@@ -44,15 +28,13 @@ export async function askGemini(prompt: string): Promise<string> {
     
     console.log("Отправка запроса к Gemini API с промптом:", prompt);
     
-    // Формируем запрос с образовательным контекстом
+    // Максимально простой запрос с минимумом параметров
     const response = await fetch(`https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${apiKey}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents: [{ 
-          parts: [{ 
-            text: `${educationContext}\n\nВопрос пользователя: ${prompt}` 
-          }] 
+          parts: [{ text: prompt }] 
         }]
       })
     });

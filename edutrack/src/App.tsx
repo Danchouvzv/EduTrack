@@ -9,7 +9,6 @@ import Analytics from './pages/Analytics';
 import StudentProfile from './pages/StudentProfile';
 import Learning from './pages/Learning';
 import TopicDetail from './pages/TopicDetail';
-import Subscription from './pages/Subscription';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import { AuthProvider } from './context/AuthContext';
@@ -50,7 +49,6 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/subscription" element={<Subscription />} />
               
               {/* Auth Routes */}
               <Route path="/auth/login" element={<Login />} />

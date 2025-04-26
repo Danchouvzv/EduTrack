@@ -53,13 +53,43 @@ const GrowthStoriesSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  const stories = t('growthStories.stories', { returnObjects: true }) as Array<{
-    name: string;
-    grade: string;
-    story: string;
-    improvement: string;
-    subject: string;
-  }>;
+  const stories = [
+    {
+      name: "Aidan",
+      grade: "9th Grade",
+      story: "Improved in geometry by 30% in just 2 months with personalized practice recommendations.",
+      improvement: "30%",
+      subject: "Geometry"
+    },
+    {
+      name: "Dilnaz",
+      grade: "8th Grade",
+      story: "Discovered her talent for biology through AI-recommended exploration activities.",
+      improvement: "45%",
+      subject: "Biology"
+    },
+    {
+      name: "Arman",
+      grade: "11th Grade",
+      story: "Overcame math anxiety with step-by-step guidance and interactive visualizations.",
+      improvement: "28%",
+      subject: "Algebra"
+    },
+    {
+      name: "Kamila",
+      grade: "10th Grade",
+      story: "Raised her language proficiency through daily AI conversation practice.",
+      improvement: "35%",
+      subject: "English"
+    },
+    {
+      name: "Timur",
+      grade: "7th Grade",
+      story: "Found a love for coding through interactive programming challenges.",
+      improvement: "40%",
+      subject: "Computer Science"
+    }
+  ];
 
   const nextSlide = () => {
     if (sliderRef.current) {
@@ -98,7 +128,7 @@ const GrowthStoriesSlider = () => {
             {t('growthStories.title')}
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            {t('growthStories.description')}
+            See how students have improved their skills and discovered new talents with EduTrack.
           </p>
         </div>
 

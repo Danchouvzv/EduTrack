@@ -4,11 +4,14 @@
     "dashboard": "Dashboard",
     "contact": "Contact",
     "login": "Login",
-    "signup": "Sign Up"
+    "signup": "Sign Up",
+    "lessons": "Lessons",
+    "subscription": "Subscription",
+    "analytics": "Analytics"
   },
   "hero": {
-    "title": "Growth journey starts here",
-    "subtitle": "Platform for conscious student development",
+    "title": "The journey of growth starts here",
+    "subtitle": "Platform for mindful development of students",
     "tryFree": "Try for free",
     "learnMore": "Learn more"
   },
@@ -16,15 +19,15 @@
     "title": "Why EduTrack?",
     "aiRecommendations": {
       "title": "AI Recommendations",
-      "description": "Personalized learning path based on individual progress"
+      "description": "Personalized learning path based on your individual progress"
     },
     "progressTracking": {
       "title": "Progress Tracking",
-      "description": "Visual analytics to track improvement over time"
+      "description": "Visual analytics to monitor improvement over time"
     },
     "parentSupport": {
       "title": "Parent Support",
-      "description": "Real-time reports and insights for parents"
+      "description": "Real-time reports and analytics for parents"
     },
     "teacherModule": {
       "title": "Teacher Module",
@@ -32,41 +35,90 @@
     },
     "multilingual": {
       "title": "Multilingual",
-      "description": "Available in Russian, Kazakh and English"
+      "description": "Available in Russian, Kazakh, and English"
     }
   },
   "growthStories": {
     "title": "Growth Stories",
-    "viewMore": "View more stories"
+    "description": "Read how other students improved their performance with our platform",
+    "viewMore": "More stories",
+    "stories": [
+      {
+        "name": "Alex K.",
+        "grade": "9th Grade",
+        "story": "I struggled with math for years until I started using EduTrack. The personalized recommendations helped me identify and fix my weak areas.",
+        "improvement": "78%",
+        "subject": "Mathematics"
+      },
+      {
+        "name": "Maria S.",
+        "grade": "11th Grade",
+        "story": "The analytics helped me understand my learning patterns and focus my efforts where they matter most. My grades improved significantly!",
+        "improvement": "92%",
+        "subject": "Physics"
+      },
+      {
+        "name": "Daniel T.",
+        "grade": "8th Grade",
+        "story": "I used to hate studying languages, but the interactive lessons made it fun. Now I look forward to my daily practice.",
+        "improvement": "85%",
+        "subject": "English"
+      },
+      {
+        "name": "Sophia L.",
+        "grade": "10th Grade",
+        "story": "The progress tracking motivated me to keep improving. I can actually see my knowledge growing week by week.",
+        "improvement": "81%",
+        "subject": "Chemistry"
+      },
+      {
+        "name": "Nathan P.",
+        "grade": "12th Grade",
+        "story": "Preparing for university entrance exams was stressful until I found EduTrack. The structured approach made all the difference.",
+        "improvement": "94%",
+        "subject": "Biology"
+      }
+    ]
+  },
+  "callToAction": {
+    "title": "Start your growth journey today",
+    "subtitle": "Join thousands of students who are already improving their skills and discovering new talents with EduTrack.",
+    "features": {
+      "personalized": "Personalized Learning",
+      "ai": "AI Recommendations",
+      "progress": "Progress Tracking"
+    },
+    "getStarted": "Get Started Free",
+    "trial": "No credit card required. 14-day free trial."
   },
   "dashboard": {
     "student": {
       "welcome": "Welcome, {{name}}",
-      "progress": "Your Progress",
+      "progress": "Your progress",
       "recommendations": "Recommendations",
-      "openAI": "Open AI Chat",
-      "achievements": "Recent Achievements"
+      "openAI": "Open AI chat",
+      "achievements": "Recent achievements"
     },
     "parent": {
-      "summary": "Child's Summary",
-      "reports": "Weekly & Monthly Reports",
-      "aiAdvice": "AI Advice for Parents",
-      "notifications": "Achievement Notifications"
+      "summary": "Child's performance summary",
+      "reports": "Weekly and monthly reports",
+      "aiAdvice": "AI advice for parents",
+      "notifications": "Achievement notifications"
     },
     "school": {
-      "classes": "Class Summary",
-      "performance": "Performance Overview",
-      "reports": "Download Reports",
-      "userManagement": "User Management"
+      "classes": "Classes overview",
+      "performance": "Performance overview",
+      "reports": "Download reports",
+      "userManagement": "User management"
     }
   },
   "aiChat": {
-    "title": "AI Mentor",
+    "title": "AI Tutor",
     "placeholder": "Ask me anything about learning...",
     "send": "Send"
   },
   "contact": {
-    "title": "Get in Touch",
+    "title": "Contact Us",
     "name": "Name",
     "email": "Email",
     "subject": "Subject",
@@ -79,6 +131,133 @@
     "company": "Company",
     "legal": "Legal",
     "rights": "All rights reserved",
-    "madeWith": "Made with ❤️ by EduTrack team"
+    "madeWith": "Made with ❤️ by the EduTrack team"
+  },
+  "subscription": {
+    "title": "Unlock your growth with EduTrack 🚀",
+    "subtitle": "Personal knowledge map. Individual recommendations. Visible progress.",
+    "banner": "✨ Special offer: 7 days free! Subscribe now!",
+    "whySubscribe": "Why subscribe?",
+    "benefits": {
+      "analysis": {
+        "title": "Deep knowledge analysis",
+        "description": "Everything you know and need to improve - on one clear map."
+      },
+      "plan": {
+        "title": "Smart growth plan",
+        "description": "AI recommendations for your progress: what to learn next to improve."
+      },
+      "goals": {
+        "title": "Motivation and goals",
+        "description": "Set personal goals, track their completion and receive rewards."
+      },
+      "history": {
+        "title": "Growth history",
+        "description": "See how your knowledge level grows step by step in each subject."
+      }
+    },
+    "choosePlan": "Choose your growth plan",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "label": "Basic",
+        "price": "$9.99",
+        "period": "/ month",
+        "description": "Perfect starting point to track progress and identify weak areas.",
+        "features": {
+          "gradesAnalysis": "Full access to grade analysis",
+          "knowledgeMap": "Knowledge map for all subjects",
+          "aiRecommendations": "AI recommendations for improvement"
+        }
+      },
+      "growth": {
+        "name": "Growth+",
+        "label": "Efficient",
+        "recommended": "⭐ Recommended plan",
+        "price": "$14.99",
+        "period": "/ month",
+        "description": "Optimal balance of features for significant academic improvement.",
+        "features": {
+          "starterFeatures": "Everything in Starter plan",
+          "weeklyPlans": "Personalized weekly plans",
+          "miniLessons": "Mini-lessons on weak topics",
+          "goalTracking": "Goal tracking + reminders"
+        }
+      },
+      "pro": {
+        "name": "PRO Growth",
+        "label": "Maximum",
+        "price": "$19.99",
+        "period": "/ month",
+        "description": "Complete toolkit for achieving outstanding results.",
+        "features": {
+          "growthFeatures": "Everything in Growth+ plan",
+          "softSkills": "Exclusive courses on soft skills",
+          "challenges": "Access to monthly challenges",
+          "support": "Priority support (24/7 chat)"
+        }
+      }
+    },
+    "comparison": "Plan comparison",
+    "feature": "Feature",
+    "select": "Select",
+    "whyUs": "Why choose us?",
+    "statistics": {
+      "description": "Over 90% of students improve their grades within 2 months with EduTrack!",
+      "activeStudents": "Active students",
+      "improvedGrades": "Improved grades",
+      "timeSaved": "Time saved per day"
+    },
+    "checkout": {
+      "title": "Checkout",
+      "info": "Payment functionality is currently in development. You'll be able to subscribe soon!",
+      "terms": "First 7 days free. No hidden charges. Cancel anytime.",
+      "close": "Close"
+    }
+  },
+  "analytics": {
+    "title": "Performance Analytics",
+    "loading": "Loading...",
+    "authRequired": {
+      "title": "Authentication Required",
+      "description": "You need to log in to access performance analytics.",
+      "button": "Log in"
+    },
+    "noData": {
+      "title": "No Data",
+      "description": "You don't have any data for analysis yet. Start learning to see statistics."
+    },
+    "subjectProgress": "Overall progress by subjects",
+    "topics": {
+      "title": "Topics and recommendations",
+      "notFound": "No topics found for the selected subject"
+    },
+    "columns": {
+      "topic": "Topic",
+      "progress": "Progress",
+      "recommendation": "AI recommendation"
+    },
+    "errorTypes": "Error types",
+    "errorCount": "Error count",
+    "performance": "Performance dynamics",
+    "chart": {
+      "yourProgress": "Your progress",
+      "averageProgress": "Average progress"
+    }
+  },
+  "chat": {
+    "title": "AI Assistant",
+    "placeholder": "Type your question...",
+    "send": "Send",
+    "typing": "AI is typing...",
+    "greeting": "Hello! I'm your educational AI assistant. How can I help you today?",
+    "errorMessage": "Sorry, an error occurred. Please try again.",
+    "contextInfo": "I'm ready to help with questions about mathematics, physics, chemistry, biology, history, literature, and other subjects. How can I assist you today?",
+    "examples": [
+      "Explain the concept of quadratic equations",
+      "How do I solve a system of linear equations?",
+      "Tell me about the periodic table of elements",
+      "How should I structure a literature essay?"
+    ]
   }
 } 

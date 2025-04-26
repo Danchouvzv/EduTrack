@@ -42,19 +42,13 @@ const Navbar = () => {
               to="/learning" 
               className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary"
             >
-              {t('navigation.lessons')}
+              Обучение
             </Link>
             <Link 
               to="/contact" 
               className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary"
             >
               {t('navigation.contact')}
-            </Link>
-            <Link 
-              to="/subscription" 
-              className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary"
-            >
-              {t('navigation.subscription')}
             </Link>
             
             {currentUser ? (
@@ -203,7 +197,7 @@ const Navbar = () => {
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-[#2a2a2a]"
               onClick={() => setIsMenuOpen(false)}
             >
-              {t('navigation.lessons')}
+              Обучение
             </Link>
             <Link 
               to="/contact" 
@@ -211,13 +205,6 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               {t('navigation.contact')}
-            </Link>
-            <Link 
-              to="/subscription" 
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-[#2a2a2a]"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t('navigation.subscription')}
             </Link>
             {currentUser ? (
               <Link 
